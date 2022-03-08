@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  font-family: 'Lobster Two' ,cursive;
+  font-size: 62.5%;
+}
+
+* {
+  font-family: 'Lora' ,sans-serif;
+}
+
+.wrapper {
+  
+}
+
+.carousel-item img {
+  max-height: 100vh;
+  object-fit: cover;
+  background-position: center;
+}
+
+.navbar {
+  position: absolute !important;
+  top: 0;
+  z-index: 9;
+}
+
+.collapse {
+  flex-grow: 0 !important;
+}
+
+.nav-link {
+  font-weight: 800;
+  font-size: 1.5em !important;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption h5{
+  font-size: 3.5em;
+}
+
+.carousel-caption p {
+  font-size: 1.5em;
+}
