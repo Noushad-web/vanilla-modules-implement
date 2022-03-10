@@ -1,4 +1,564 @@
-const data = [
+
+const curated = () => {
+
+  const randomLink = [
+    './animal.html',
+    './nature.html',
+    './fitness.html'
+  ]
+
+  let imgData = data.map((eachData, index) => {
+    const data = `
+      <figure data-id=${index}>
+        <a href="${randomLink[Math.floor(Math.random() * 3)]}">
+          <img width=336 height=504 src="${eachData.src.portrait}" alt="${eachData.alt}" class="img-fluid">          
+        </a>
+
+          <figcaption>
+            <a href="${eachData.photographer_url}">
+              ${eachData.photographer}
+            </a>
+          </figcaption>
+      </figure>	
+    `;
+
+    return data;
+  })
+
+  return imgData.join('')
+}
+
+export default curated;
+
+const data = [  
+  {
+    "id": 11405127,
+    "width": 2550,
+    "height": 4064,
+    "url": "https://www.pexels.com/photo/bouquet-of-tulips-in-vase-11405127/",
+    "photographer": "Zsófia Fehér",
+    "photographer_url": "https://www.pexels.com/@zsofia-feher-685822",
+    "photographer_id": 685822,
+    "avg_color": "#A39D8F",
+    "src": {
+      "original": "https://images.pexels.com/photos/11405127/pexels-photo-11405127.jpeg",
+      "large2x": "https://images.pexels.com/photos/11405127/pexels-photo-11405127.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11405127/pexels-photo-11405127.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11405127/pexels-photo-11405127.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11405127/pexels-photo-11405127.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11405127/pexels-photo-11405127.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11405127/pexels-photo-11405127.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11405127/pexels-photo-11405127.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": ""
+  },
+  {
+    "id": 11405108,
+    "width": 2550,
+    "height": 4113,
+    "url": "https://www.pexels.com/photo/tulips-in-glass-vase-11405108/",
+    "photographer": "Zsófia Fehér",
+    "photographer_url": "https://www.pexels.com/@zsofia-feher-685822",
+    "photographer_id": 685822,
+    "avg_color": "#90938A",
+    "src": {
+      "original": "https://images.pexels.com/photos/11405108/pexels-photo-11405108.jpeg",
+      "large2x": "https://images.pexels.com/photos/11405108/pexels-photo-11405108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11405108/pexels-photo-11405108.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11405108/pexels-photo-11405108.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11405108/pexels-photo-11405108.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11405108/pexels-photo-11405108.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11405108/pexels-photo-11405108.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11405108/pexels-photo-11405108.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Free stock photo of bouquet, flowers, instant photo"
+  },
+  {
+    "id": 11360705,
+    "width": 6000,
+    "height": 4000,
+    "url": "https://www.pexels.com/photo/black-and-white-photo-of-woman-swimming-underwater-11360705/",
+    "photographer": "Kammeran Gonzalez-Keola",
+    "photographer_url": "https://www.pexels.com/@kammeran-gonzalez-keola-3137381",
+    "photographer_id": 3137381,
+    "avg_color": "#5B5B5B",
+    "src": {
+      "original": "https://images.pexels.com/photos/11360705/pexels-photo-11360705.jpeg",
+      "large2x": "https://images.pexels.com/photos/11360705/pexels-photo-11360705.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11360705/pexels-photo-11360705.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11360705/pexels-photo-11360705.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11360705/pexels-photo-11360705.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11360705/pexels-photo-11360705.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11360705/pexels-photo-11360705.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11360705/pexels-photo-11360705.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Black and White Photo of Woman Swimming Underwater "
+  },
+  {
+    "id": 11357654,
+    "width": 4480,
+    "height": 5600,
+    "url": "https://www.pexels.com/photo/black-and-white-portrait-of-a-woman-11357654/",
+    "photographer": "Gu Kssn",
+    "photographer_url": "https://www.pexels.com/@gu-kssn-76107222",
+    "photographer_id": 76107222,
+    "avg_color": "#797979",
+    "src": {
+      "original": "https://images.pexels.com/photos/11357654/pexels-photo-11357654.jpeg",
+      "large2x": "https://images.pexels.com/photos/11357654/pexels-photo-11357654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11357654/pexels-photo-11357654.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11357654/pexels-photo-11357654.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11357654/pexels-photo-11357654.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11357654/pexels-photo-11357654.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11357654/pexels-photo-11357654.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11357654/pexels-photo-11357654.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Black and White Portrait of a Woman "
+  },
+  {
+    "id": 11360695,
+    "width": 2581,
+    "height": 3872,
+    "url": "https://www.pexels.com/photo/man-lying-in-sand-11360695/",
+    "photographer": "Kristina Holman",
+    "photographer_url": "https://www.pexels.com/@kristina-holman-189555703",
+    "photographer_id": 189555703,
+    "avg_color": "#D8D9DB",
+    "src": {
+      "original": "https://images.pexels.com/photos/11360695/pexels-photo-11360695.jpeg",
+      "large2x": "https://images.pexels.com/photos/11360695/pexels-photo-11360695.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11360695/pexels-photo-11360695.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11360695/pexels-photo-11360695.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11360695/pexels-photo-11360695.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11360695/pexels-photo-11360695.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11360695/pexels-photo-11360695.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11360695/pexels-photo-11360695.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Man Lying in Sand"
+  },
+  {
+    "id": 11354945,
+    "width": 3524,
+    "height": 5286,
+    "url": "https://www.pexels.com/photo/black-coffee-on-wooden-table-11354945/",
+    "photographer": "İsra Nilgün Yılmaz",
+    "photographer_url": "https://www.pexels.com/@i-sra-nilgun-yilmaz-43719262",
+    "photographer_id": 43719262,
+    "avg_color": "#654431",
+    "src": {
+      "original": "https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg",
+      "large2x": "https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11354945/pexels-photo-11354945.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Black Coffee on Wooden Table"
+  },
+  {
+    "id": 11360706,
+    "width": 7935,
+    "height": 5293,
+    "url": "https://www.pexels.com/photo/swimming-in-rough-sea-11360706/",
+    "photographer": "Kammeran Gonzalez-Keola",
+    "photographer_url": "https://www.pexels.com/@kammeran-gonzalez-keola-3137381",
+    "photographer_id": 3137381,
+    "avg_color": "#9C7D4F",
+    "src": {
+      "original": "https://images.pexels.com/photos/11360706/pexels-photo-11360706.jpeg",
+      "large2x": "https://images.pexels.com/photos/11360706/pexels-photo-11360706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11360706/pexels-photo-11360706.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11360706/pexels-photo-11360706.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11360706/pexels-photo-11360706.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11360706/pexels-photo-11360706.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11360706/pexels-photo-11360706.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11360706/pexels-photo-11360706.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Swimming in Rough Sea "
+  },
+  {
+    "id": 11396324,
+    "width": 3462,
+    "height": 4621,
+    "url": "https://www.pexels.com/photo/person-in-black-jacket-walking-down-the-stairs-11396324/",
+    "photographer": "Brandao levir",
+    "photographer_url": "https://www.pexels.com/@brandao-levir-191857972",
+    "photographer_id": 191857972,
+    "avg_color": "#493830",
+    "src": {
+      "original": "https://images.pexels.com/photos/11396324/pexels-photo-11396324.jpeg",
+      "large2x": "https://images.pexels.com/photos/11396324/pexels-photo-11396324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11396324/pexels-photo-11396324.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11396324/pexels-photo-11396324.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11396324/pexels-photo-11396324.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11396324/pexels-photo-11396324.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11396324/pexels-photo-11396324.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11396324/pexels-photo-11396324.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Person in Black Jacket Walking Down the Stairs"
+  },
+  {
+    "id": 11396319,
+    "width": 3845,
+    "height": 4825,
+    "url": "https://www.pexels.com/photo/silhouette-of-city-buildings-during-sunset-11396319/",
+    "photographer": "Brandao levir",
+    "photographer_url": "https://www.pexels.com/@brandao-levir-191857972",
+    "photographer_id": 191857972,
+    "avg_color": "#412C29",
+    "src": {
+      "original": "https://images.pexels.com/photos/11396319/pexels-photo-11396319.jpeg",
+      "large2x": "https://images.pexels.com/photos/11396319/pexels-photo-11396319.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11396319/pexels-photo-11396319.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11396319/pexels-photo-11396319.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11396319/pexels-photo-11396319.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11396319/pexels-photo-11396319.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11396319/pexels-photo-11396319.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11396319/pexels-photo-11396319.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Silhouette of City Buildings during Sunset"
+  },
+  {
+    "id": 5775309,
+    "width": 4744,
+    "height": 3163,
+    "url": "https://www.pexels.com/photo/white-clouds-and-blue-sky-5775309/",
+    "photographer": "Disha Sheta",
+    "photographer_url": "https://www.pexels.com/@disha-sheta-596631",
+    "photographer_id": 596631,
+    "avg_color": "#4087CC",
+    "src": {
+      "original": "https://images.pexels.com/photos/5775309/pexels-photo-5775309.jpeg",
+      "large2x": "https://images.pexels.com/photos/5775309/pexels-photo-5775309.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/5775309/pexels-photo-5775309.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/5775309/pexels-photo-5775309.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/5775309/pexels-photo-5775309.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/5775309/pexels-photo-5775309.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/5775309/pexels-photo-5775309.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/5775309/pexels-photo-5775309.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "White Clouds and Blue Sky"
+  },
+  {
+    "id": 10158737,
+    "width": 2048,
+    "height": 2048,
+    "url": "https://www.pexels.com/photo/woman-in-black-dress-sitting-on-chair-10158737/",
+    "photographer": "Daria Kruchkova",
+    "photographer_url": "https://www.pexels.com/@daria-kruchkova-124357369",
+    "photographer_id": 124357369,
+    "avg_color": "#D9D2CA",
+    "src": {
+      "original": "https://images.pexels.com/photos/10158737/pexels-photo-10158737.jpeg",
+      "large2x": "https://images.pexels.com/photos/10158737/pexels-photo-10158737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/10158737/pexels-photo-10158737.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/10158737/pexels-photo-10158737.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/10158737/pexels-photo-10158737.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/10158737/pexels-photo-10158737.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/10158737/pexels-photo-10158737.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/10158737/pexels-photo-10158737.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Woman in Black Dress Sitting on Chair"
+  },
+  {
+    "id": 11340815,
+    "width": 3456,
+    "height": 5184,
+    "url": "https://www.pexels.com/photo/mountains-and-hills-under-snow-11340815/",
+    "photographer": "Thomas Mastromonaco",
+    "photographer_url": "https://www.pexels.com/@thomas-mastromonaco-188406311",
+    "photographer_id": 188406311,
+    "avg_color": "#697DA2",
+    "src": {
+      "original": "https://images.pexels.com/photos/11340815/pexels-photo-11340815.jpeg",
+      "large2x": "https://images.pexels.com/photos/11340815/pexels-photo-11340815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11340815/pexels-photo-11340815.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11340815/pexels-photo-11340815.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11340815/pexels-photo-11340815.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11340815/pexels-photo-11340815.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11340815/pexels-photo-11340815.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11340815/pexels-photo-11340815.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Mountains and Hills under Snow"
+  },
+  {
+    "id": 11348767,
+    "width": 5870,
+    "height": 3915,
+    "url": "https://www.pexels.com/photo/shark-and-school-of-zebra-fish-underwater-11348767/",
+    "photographer": "Daniel Torobekov",
+    "photographer_url": "https://www.pexels.com/@alohaphotostudio",
+    "photographer_id": 3028574,
+    "avg_color": "#494E6B",
+    "src": {
+      "original": "https://images.pexels.com/photos/11348767/pexels-photo-11348767.jpeg",
+      "large2x": "https://images.pexels.com/photos/11348767/pexels-photo-11348767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11348767/pexels-photo-11348767.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11348767/pexels-photo-11348767.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11348767/pexels-photo-11348767.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11348767/pexels-photo-11348767.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11348767/pexels-photo-11348767.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11348767/pexels-photo-11348767.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Shark and School of Zebra Fish Underwater"
+  },
+  {
+    "id": 11349463,
+    "width": 2258,
+    "height": 2937,
+    "url": "https://www.pexels.com/photo/white-plate-decorated-with-blue-flowers-11349463/",
+    "photographer": "Agnese Lunecka",
+    "photographer_url": "https://www.pexels.com/@agneselunecka",
+    "photographer_id": 498376,
+    "avg_color": "#DFE3E6",
+    "src": {
+      "original": "https://images.pexels.com/photos/11349463/pexels-photo-11349463.jpeg",
+      "large2x": "https://images.pexels.com/photos/11349463/pexels-photo-11349463.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11349463/pexels-photo-11349463.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11349463/pexels-photo-11349463.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11349463/pexels-photo-11349463.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11349463/pexels-photo-11349463.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11349463/pexels-photo-11349463.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11349463/pexels-photo-11349463.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "White Plate Decorated with Blue Flowers"
+  },
+  {
+    "id": 11354823,
+    "width": 4000,
+    "height": 6000,
+    "url": "https://www.pexels.com/photo/blue-baloons-on-pavement-11354823/",
+    "photographer": "Oyster Haus",
+    "photographer_url": "https://www.pexels.com/@karina-zhukovskaya",
+    "photographer_id": 16616019,
+    "avg_color": "#435AA0",
+    "src": {
+      "original": "https://images.pexels.com/photos/11354823/pexels-photo-11354823.jpeg",
+      "large2x": "https://images.pexels.com/photos/11354823/pexels-photo-11354823.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11354823/pexels-photo-11354823.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11354823/pexels-photo-11354823.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11354823/pexels-photo-11354823.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11354823/pexels-photo-11354823.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11354823/pexels-photo-11354823.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11354823/pexels-photo-11354823.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Blue balloons"
+  },
+  {
+    "id": 11354340,
+    "width": 4160,
+    "height": 6240,
+    "url": "https://www.pexels.com/photo/woman-on-mountain-looking-at-view-11354340/",
+    "photographer": "Navneet Kaur",
+    "photographer_url": "https://www.pexels.com/@navneet-kaur-189549983",
+    "photographer_id": 189549983,
+    "avg_color": "#B2C8D6",
+    "src": {
+      "original": "https://images.pexels.com/photos/11354340/pexels-photo-11354340.jpeg",
+      "large2x": "https://images.pexels.com/photos/11354340/pexels-photo-11354340.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11354340/pexels-photo-11354340.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11354340/pexels-photo-11354340.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11354340/pexels-photo-11354340.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11354340/pexels-photo-11354340.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11354340/pexels-photo-11354340.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11354340/pexels-photo-11354340.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Woman on Mountain Looking at View"
+  },
+  {
+    "id": 11392874,
+    "width": 4640,
+    "height": 6960,
+    "url": "https://www.pexels.com/photo/text-11392874/",
+    "photographer": "Efrem  Efre",
+    "photographer_url": "https://www.pexels.com/@efrem-efre-2786187",
+    "photographer_id": 2786187,
+    "avg_color": "#5A5A5A",
+    "src": {
+      "original": "https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg",
+      "large2x": "https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11392874/pexels-photo-11392874.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Text"
+  },
+  {
+    "id": 11392488,
+    "width": 4000,
+    "height": 6000,
+    "url": "https://www.pexels.com/photo/green-trees-on-brown-field-11392488/",
+    "photographer": "Abraham",
+    "photographer_url": "https://www.pexels.com/@abraham-191284090",
+    "photographer_id": 191284090,
+    "avg_color": "#7C4F25",
+    "src": {
+      "original": "https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg",
+      "large2x": "https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11392488/pexels-photo-11392488.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Green Trees on Brown Field"
+  },
+  {
+    "id": 11378053,
+    "width": 4000,
+    "height": 6000,
+    "url": "https://www.pexels.com/photo/snow-capped-mountains-at-glen-etive-in-the-scottish-highlands-11378053/",
+    "photographer": "Joe",
+    "photographer_url": "https://www.pexels.com/@joe-83912606",
+    "photographer_id": 83912606,
+    "avg_color": "#444444",
+    "src": {
+      "original": "https://images.pexels.com/photos/11378053/pexels-photo-11378053.jpeg",
+      "large2x": "https://images.pexels.com/photos/11378053/pexels-photo-11378053.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11378053/pexels-photo-11378053.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11378053/pexels-photo-11378053.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11378053/pexels-photo-11378053.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11378053/pexels-photo-11378053.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11378053/pexels-photo-11378053.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11378053/pexels-photo-11378053.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Snow capped mountains at Glen Etive in the Scottish Highlands"
+  },
+  {
+    "id": 11376531,
+    "width": 2448,
+    "height": 3264,
+    "url": "https://www.pexels.com/photo/grayscale-photo-of-concrete-building-11376531/",
+    "photographer": "Sujira Su",
+    "photographer_url": "https://www.pexels.com/@sujira-su-178199191",
+    "photographer_id": 178199191,
+    "avg_color": "#636363",
+    "src": {
+      "original": "https://images.pexels.com/photos/11376531/pexels-photo-11376531.jpeg",
+      "large2x": "https://images.pexels.com/photos/11376531/pexels-photo-11376531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11376531/pexels-photo-11376531.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11376531/pexels-photo-11376531.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11376531/pexels-photo-11376531.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11376531/pexels-photo-11376531.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11376531/pexels-photo-11376531.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11376531/pexels-photo-11376531.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Grayscale Photo of Concrete Building"
+  },
+  {
+    "id": 11374858,
+    "width": 2645,
+    "height": 3308,
+    "url": "https://www.pexels.com/photo/black-and-white-glass-window-11374858/",
+    "photographer": "MOHAMED ABDELSADIG",
+    "photographer_url": "https://www.pexels.com/@moab94",
+    "photographer_id": 786714,
+    "avg_color": "#A4A4A4",
+    "src": {
+      "original": "https://images.pexels.com/photos/11374858/pexels-photo-11374858.jpeg",
+      "large2x": "https://images.pexels.com/photos/11374858/pexels-photo-11374858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11374858/pexels-photo-11374858.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11374858/pexels-photo-11374858.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11374858/pexels-photo-11374858.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11374858/pexels-photo-11374858.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11374858/pexels-photo-11374858.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11374858/pexels-photo-11374858.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Black and White Glass Window"
+  },
+  {
+    "id": 11334858,
+    "width": 3558,
+    "height": 5337,
+    "url": "https://www.pexels.com/photo/black-and-white-photo-of-flowers-in-vase-11334858/",
+    "photographer": "Albina White",
+    "photographer_url": "https://www.pexels.com/@albina-white-41368251",
+    "photographer_id": 41368251,
+    "avg_color": "#A5A5A5",
+    "src": {
+      "original": "https://images.pexels.com/photos/11334858/pexels-photo-11334858.jpeg",
+      "large2x": "https://images.pexels.com/photos/11334858/pexels-photo-11334858.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11334858/pexels-photo-11334858.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11334858/pexels-photo-11334858.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11334858/pexels-photo-11334858.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11334858/pexels-photo-11334858.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11334858/pexels-photo-11334858.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11334858/pexels-photo-11334858.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Black and White Photo of Flowers in Vase "
+  },
+  {
+    "id": 11338402,
+    "width": 4000,
+    "height": 6000,
+    "url": "https://www.pexels.com/photo/woman-in-red-and-black-outfit-leaning-against-wall-11338402/",
+    "photographer": "Victor Terrell",
+    "photographer_url": "https://www.pexels.com/@victor-terrell-182709190",
+    "photographer_id": 182709190,
+    "avg_color": "#9F9490",
+    "src": {
+      "original": "https://images.pexels.com/photos/11338402/pexels-photo-11338402.jpeg",
+      "large2x": "https://images.pexels.com/photos/11338402/pexels-photo-11338402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11338402/pexels-photo-11338402.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11338402/pexels-photo-11338402.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11338402/pexels-photo-11338402.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11338402/pexels-photo-11338402.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11338402/pexels-photo-11338402.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11338402/pexels-photo-11338402.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Woman in Red and Black Outfit Leaning Against Wall"
+  },
+  {
+    "id": 11314496,
+    "width": 3704,
+    "height": 5568,
+    "url": "https://www.pexels.com/photo/long-exposure-photography-of-cars-on-road-11314496/",
+    "photographer": "Arshdeep Singh",
+    "photographer_url": "https://www.pexels.com/@arshdeep-singh-1734861",
+    "photographer_id": 1734861,
+    "avg_color": "#534032",
+    "src": {
+      "original": "https://images.pexels.com/photos/11314496/pexels-photo-11314496.jpeg",
+      "large2x": "https://images.pexels.com/photos/11314496/pexels-photo-11314496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11314496/pexels-photo-11314496.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11314496/pexels-photo-11314496.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11314496/pexels-photo-11314496.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11314496/pexels-photo-11314496.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11314496/pexels-photo-11314496.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11314496/pexels-photo-11314496.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Time Lapse Photography of Cars on Road"
+  },
   {
     "id": 11321694,
     "width": 3729,
@@ -64,6 +624,72 @@ const data = [
     },
     "liked": false,
     "alt": "Woman Sitting with Ball"
+  },
+  {
+    "id": 11319741,
+    "width": 2400,
+    "height": 3600,
+    "url": "https://www.pexels.com/photo/candles-in-jars-11319741/",
+    "photographer": "Mathilde Langevin",
+    "photographer_url": "https://www.pexels.com/@mathilde",
+    "photographer_id": 157994802,
+    "avg_color": "#AEAFAA",
+    "src": {
+      "original": "https://images.pexels.com/photos/11319741/pexels-photo-11319741.jpeg",
+      "large2x": "https://images.pexels.com/photos/11319741/pexels-photo-11319741.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11319741/pexels-photo-11319741.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11319741/pexels-photo-11319741.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11319741/pexels-photo-11319741.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11319741/pexels-photo-11319741.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11319741/pexels-photo-11319741.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11319741/pexels-photo-11319741.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Candles in Jars "
+  },
+  {
+    "id": 11347811,
+    "width": 4000,
+    "height": 5000,
+    "url": "https://www.pexels.com/photo/black-and-white-fashion-people-woman-11347811/",
+    "photographer": "Lany-Jade Mondou",
+    "photographer_url": "https://www.pexels.com/@lany",
+    "photographer_id": 135943481,
+    "avg_color": "#9D9D9D",
+    "src": {
+      "original": "https://images.pexels.com/photos/11347811/pexels-photo-11347811.jpeg",
+      "large2x": "https://images.pexels.com/photos/11347811/pexels-photo-11347811.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11347811/pexels-photo-11347811.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11347811/pexels-photo-11347811.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11347811/pexels-photo-11347811.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11347811/pexels-photo-11347811.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11347811/pexels-photo-11347811.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11347811/pexels-photo-11347811.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Free stock photo of 35mm, actress, administration"
+  },
+  {
+    "id": 11346324,
+    "width": 10000,
+    "height": 7500,
+    "url": "https://www.pexels.com/photo/the-colors-of-ukraine-and-the-symbol-of-peace-11346324/",
+    "photographer": "Engin Akyurt",
+    "photographer_url": "https://www.pexels.com/@enginakyurt",
+    "photographer_id": 631997,
+    "avg_color": "#33485D",
+    "src": {
+      "original": "https://images.pexels.com/photos/11346324/pexels-photo-11346324.jpeg",
+      "large2x": "https://images.pexels.com/photos/11346324/pexels-photo-11346324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11346324/pexels-photo-11346324.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11346324/pexels-photo-11346324.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11346324/pexels-photo-11346324.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11346324/pexels-photo-11346324.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11346324/pexels-photo-11346324.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11346324/pexels-photo-11346324.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "The colors of Ukraine and the symbol of peace"
   },
   {
     "id": 11330281,
@@ -132,6 +758,28 @@ const data = [
     "alt": "Black and White Tree Illustration"
   },
   {
+    "id": 11320132,
+    "width": 3662,
+    "height": 5486,
+    "url": "https://www.pexels.com/photo/pexels-returns-evento-pexels-11320132/",
+    "photographer": "Hebert  Santos",
+    "photographer_url": "https://www.pexels.com/@hebertsantos",
+    "photographer_id": 1346254,
+    "avg_color": "#170103",
+    "src": {
+      "original": "https://images.pexels.com/photos/11320132/pexels-photo-11320132.jpeg",
+      "large2x": "https://images.pexels.com/photos/11320132/pexels-photo-11320132.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11320132/pexels-photo-11320132.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11320132/pexels-photo-11320132.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11320132/pexels-photo-11320132.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11320132/pexels-photo-11320132.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11320132/pexels-photo-11320132.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11320132/pexels-photo-11320132.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": " Pexels Returns: Evento Pexels"
+  },
+  {
     "id": 11284054,
     "width": 5870,
     "height": 3913,
@@ -173,7 +821,29 @@ const data = [
       "tiny": "https://images.pexels.com/photos/11268805/pexels-photo-11268805.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
     },
     "liked": false,
-    "alt": "Yellow Flower on White Wall"
+    "alt": "Sun Rays on Daffodils in Vase "
+  },
+  {
+    "id": 11264893,
+    "width": 3840,
+    "height": 5760,
+    "url": "https://www.pexels.com/photo/close-up-view-of-woman-face-11264893/",
+    "photographer": "Daria Nekipelova",
+    "photographer_url": "https://www.pexels.com/@daria-nekipelova-112078039",
+    "photographer_id": 112078039,
+    "avg_color": "#2C211F",
+    "src": {
+      "original": "https://images.pexels.com/photos/11264893/pexels-photo-11264893.jpeg",
+      "large2x": "https://images.pexels.com/photos/11264893/pexels-photo-11264893.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11264893/pexels-photo-11264893.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11264893/pexels-photo-11264893.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11264893/pexels-photo-11264893.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11264893/pexels-photo-11264893.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11264893/pexels-photo-11264893.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11264893/pexels-photo-11264893.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Close-up View of Woman Face"
   },
   {
     "id": 11258734,
@@ -220,6 +890,50 @@ const data = [
     "alt": "Black Street Light Near High Rise Buildings"
   },
   {
+    "id": 11299549,
+    "width": 3972,
+    "height": 5958,
+    "url": "https://www.pexels.com/photo/white-concrete-building-with-red-flag-on-top-11299549/",
+    "photographer": "Mathias P.R. Reding",
+    "photographer_url": "https://www.pexels.com/@matreding",
+    "photographer_id": 2848684,
+    "avg_color": "#887C70",
+    "src": {
+      "original": "https://images.pexels.com/photos/11299549/pexels-photo-11299549.jpeg",
+      "large2x": "https://images.pexels.com/photos/11299549/pexels-photo-11299549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11299549/pexels-photo-11299549.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11299549/pexels-photo-11299549.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11299549/pexels-photo-11299549.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11299549/pexels-photo-11299549.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11299549/pexels-photo-11299549.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11299549/pexels-photo-11299549.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "White Concrete Building With Red Flag on Top"
+  },
+  {
+    "id": 11296338,
+    "width": 3820,
+    "height": 4912,
+    "url": "https://www.pexels.com/photo/man-in-button-up-shirt-11296338/",
+    "photographer": "Anastasia Tooming",
+    "photographer_url": "https://www.pexels.com/@anastasia-tooming-175406056",
+    "photographer_id": 175406056,
+    "avg_color": "#252525",
+    "src": {
+      "original": "https://images.pexels.com/photos/11296338/pexels-photo-11296338.jpeg",
+      "large2x": "https://images.pexels.com/photos/11296338/pexels-photo-11296338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11296338/pexels-photo-11296338.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11296338/pexels-photo-11296338.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11296338/pexels-photo-11296338.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11296338/pexels-photo-11296338.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11296338/pexels-photo-11296338.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11296338/pexels-photo-11296338.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Man in Button Up Shirt"
+  },
+  {
     "id": 11284548,
     "width": 3770,
     "height": 4712,
@@ -240,6 +954,50 @@ const data = [
     },
     "liked": false,
     "alt": "Young girl protesting against war in ukraine"
+  },
+  {
+    "id": 11282403,
+    "width": 6000,
+    "height": 4000,
+    "url": "https://www.pexels.com/photo/el-arco-11282403/",
+    "photographer": "Salvador Ortegarrieta",
+    "photographer_url": "https://www.pexels.com/@salvador-ortegarrieta-177081925",
+    "photographer_id": 177081925,
+    "avg_color": "#4C5E60",
+    "src": {
+      "original": "https://images.pexels.com/photos/11282403/pexels-photo-11282403.jpeg",
+      "large2x": "https://images.pexels.com/photos/11282403/pexels-photo-11282403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11282403/pexels-photo-11282403.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11282403/pexels-photo-11282403.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11282403/pexels-photo-11282403.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11282403/pexels-photo-11282403.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11282403/pexels-photo-11282403.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11282403/pexels-photo-11282403.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "El Arco"
+  },
+  {
+    "id": 2727904,
+    "width": 3024,
+    "height": 4032,
+    "url": "https://www.pexels.com/photo/summer-garden-grass-leaf-2727904/",
+    "photographer": "Lisa Hordovenko",
+    "photographer_url": "https://www.pexels.com/@lisa-hordovenko-1412872",
+    "photographer_id": 1412872,
+    "avg_color": "#557548",
+    "src": {
+      "original": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg",
+      "large2x": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Green Banana Leaf in Close Up Photography"
   },
   {
     "id": 4869123,
@@ -286,28 +1044,6 @@ const data = [
     "alt": "Blue and White Light Trails"
   },
   {
-    "id": 2727904,
-    "width": 3024,
-    "height": 4032,
-    "url": "https://www.pexels.com/photo/summer-garden-grass-leaf-2727904/",
-    "photographer": "Lisa Hordovenko",
-    "photographer_url": "https://www.pexels.com/@lisa-hordovenko-1412872",
-    "photographer_id": 1412872,
-    "avg_color": "#557548",
-    "src": {
-      "original": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg",
-      "large2x": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "large": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "medium": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "small": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&h=130",
-      "portrait": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
-      "landscape": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-      "tiny": "https://images.pexels.com/photos/2727904/pexels-photo-2727904.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
-    },
-    "liked": false,
-    "alt": ""
-  },
-  {
     "id": 11217153,
     "width": 4000,
     "height": 6000,
@@ -330,28 +1066,6 @@ const data = [
     "alt": "Woman in Coat"
   },
   {
-    "id": 11268995,
-    "width": 3648,
-    "height": 5472,
-    "url": "https://www.pexels.com/photo/woman-wearing-brown-beaded-necklace-11268995/",
-    "photographer": "Hannah Bickmore",
-    "photographer_url": "https://www.pexels.com/@hannah-bickmore-105653438",
-    "photographer_id": 105653438,
-    "avg_color": "#7B6B5E",
-    "src": {
-      "original": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg",
-      "large2x": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "large": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "medium": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "small": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&h=130",
-      "portrait": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
-      "landscape": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-      "tiny": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
-    },
-    "liked": false,
-    "alt": "Woman Wearing Brown Beaded Necklace"
-  },
-  {
     "id": 11269011,
     "width": 3648,
     "height": 5472,
@@ -372,6 +1086,28 @@ const data = [
     },
     "liked": false,
     "alt": "Woman in White Long Sleeve Dress"
+  },
+  {
+    "id": 11268995,
+    "width": 3648,
+    "height": 5472,
+    "url": "https://www.pexels.com/photo/woman-wearing-brown-beaded-necklace-11268995/",
+    "photographer": "Hannah Bickmore",
+    "photographer_url": "https://www.pexels.com/@hannah-bickmore-105653438",
+    "photographer_id": 105653438,
+    "avg_color": "#7B6B5E",
+    "src": {
+      "original": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg",
+      "large2x": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11268995/pexels-photo-11268995.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Woman Wearing Brown Beaded Necklace"
   },
   {
     "id": 11256205,
@@ -416,6 +1152,28 @@ const data = [
     },
     "liked": false,
     "alt": "Brown and Gray Mountain Under White Sky"
+  },
+  {
+    "id": 11245019,
+    "width": 2667,
+    "height": 3999,
+    "url": "https://www.pexels.com/photo/red-chinese-lanterns-on-black-steel-wall-11245019/",
+    "photographer": "Markus Winkler",
+    "photographer_url": "https://www.pexels.com/@markus-winkler-1430818",
+    "photographer_id": 1430818,
+    "avg_color": "#221715",
+    "src": {
+      "original": "https://images.pexels.com/photos/11245019/pexels-photo-11245019.jpeg",
+      "large2x": "https://images.pexels.com/photos/11245019/pexels-photo-11245019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11245019/pexels-photo-11245019.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11245019/pexels-photo-11245019.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11245019/pexels-photo-11245019.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11245019/pexels-photo-11245019.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11245019/pexels-photo-11245019.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11245019/pexels-photo-11245019.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Red Chinese Lanterns on Black Steel Wall"
   },
   {
     "id": 11246410,
@@ -484,6 +1242,28 @@ const data = [
     "alt": "Redhead Woman Smelling Bouquet of Wildflowers"
   },
   {
+    "id": 11188683,
+    "width": 4000,
+    "height": 6000,
+    "url": "https://www.pexels.com/photo/full-shot-of-dried-citruses-slices-11188683/",
+    "photographer": "Olenka Sergienko",
+    "photographer_url": "https://www.pexels.com/@olenkasergienko",
+    "photographer_id": 873099,
+    "avg_color": "#B7703C",
+    "src": {
+      "original": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg",
+      "large2x": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Full Shot of Dried Citruses Slices"
+  },
+  {
     "id": 11198429,
     "width": 2000,
     "height": 2842,
@@ -526,28 +1306,6 @@ const data = [
     },
     "liked": false,
     "alt": "Black and White Flower Vase with a Face "
-  },
-  {
-    "id": 11188683,
-    "width": 4000,
-    "height": 6000,
-    "url": "https://www.pexels.com/photo/full-shot-of-dried-citruses-slices-11188683/",
-    "photographer": "Olenka Sergienko",
-    "photographer_url": "https://www.pexels.com/@olenkasergienko",
-    "photographer_id": 873099,
-    "avg_color": "#B7703C",
-    "src": {
-      "original": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg",
-      "large2x": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "large": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      "medium": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "small": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&h=130",
-      "portrait": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
-      "landscape": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
-      "tiny": "https://images.pexels.com/photos/11188683/pexels-photo-11188683.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
-    },
-    "liked": false,
-    "alt": "Full Shot of Dried Citruses Slices"
   },
   {
     "id": 11193873,
@@ -658,24 +1416,137 @@ const data = [
     },
     "liked": false,
     "alt": "Gray Concrete Building Under White Sky"
-  }
+  },
+  {
+    "id": 9351585,
+    "width": 3563,
+    "height": 4454,
+    "url": "https://www.pexels.com/photo/woman-in-gray-long-sleeve-shirt-and-blue-denim-jeans-riding-bicycle-9351585/",
+    "photographer": "Henrique Morais",
+    "photographer_url": "https://www.pexels.com/@henriquemorais",
+    "photographer_id": 1906596,
+    "avg_color": "#616445",
+    "src": {
+      "original": "https://images.pexels.com/photos/9351585/pexels-photo-9351585.jpeg",
+      "large2x": "https://images.pexels.com/photos/9351585/pexels-photo-9351585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/9351585/pexels-photo-9351585.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/9351585/pexels-photo-9351585.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/9351585/pexels-photo-9351585.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/9351585/pexels-photo-9351585.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/9351585/pexels-photo-9351585.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/9351585/pexels-photo-9351585.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Woman in Gray Long Sleeve Shirt and Blue Denim Jeans Riding Bicycle"
+  },
+  {
+    "id": 11216549,
+    "width": 2832,
+    "height": 4256,
+    "url": "https://www.pexels.com/photo/grayscale-photo-of-man-walking-on-hallway-11216549/",
+    "photographer": "Anton",
+    "photographer_url": "https://www.pexels.com/@anton-181978116",
+    "photographer_id": 181978116,
+    "avg_color": "#353535",
+    "src": {
+      "original": "https://images.pexels.com/photos/11216549/pexels-photo-11216549.jpeg",
+      "large2x": "https://images.pexels.com/photos/11216549/pexels-photo-11216549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11216549/pexels-photo-11216549.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11216549/pexels-photo-11216549.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11216549/pexels-photo-11216549.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11216549/pexels-photo-11216549.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11216549/pexels-photo-11216549.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11216549/pexels-photo-11216549.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Grayscale Photo of Man Walking on Hallway"
+  },
+  {
+    "id": 11210402,
+    "width": 6944,
+    "height": 8564,
+    "url": "https://www.pexels.com/photo/grayscale-photo-of-white-flowers-11210402/",
+    "photographer": "Louis Tran",
+    "photographer_url": "https://www.pexels.com/@louis-tran-155871478",
+    "photographer_id": 155871478,
+    "avg_color": "#252525",
+    "src": {
+      "original": "https://images.pexels.com/photos/11210402/pexels-photo-11210402.jpeg",
+      "large2x": "https://images.pexels.com/photos/11210402/pexels-photo-11210402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11210402/pexels-photo-11210402.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11210402/pexels-photo-11210402.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11210402/pexels-photo-11210402.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11210402/pexels-photo-11210402.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11210402/pexels-photo-11210402.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11210402/pexels-photo-11210402.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Grayscale Photo of White Flowers"
+  },
+  {
+    "id": 11207765,
+    "width": 2127,
+    "height": 3312,
+    "url": "https://www.pexels.com/photo/black-and-white-bird-on-gray-sand-11207765/",
+    "photographer": "sofieke van Kooten",
+    "photographer_url": "https://www.pexels.com/@sofieke",
+    "photographer_id": 167689154,
+    "avg_color": "#7E7F81",
+    "src": {
+      "original": "https://images.pexels.com/photos/11207765/pexels-photo-11207765.jpeg",
+      "large2x": "https://images.pexels.com/photos/11207765/pexels-photo-11207765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11207765/pexels-photo-11207765.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11207765/pexels-photo-11207765.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11207765/pexels-photo-11207765.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11207765/pexels-photo-11207765.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11207765/pexels-photo-11207765.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11207765/pexels-photo-11207765.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Black and White Bird on Gray Sand"
+  },
+  {
+    "id": 11203434,
+    "width": 2374,
+    "height": 2967,
+    "url": "https://www.pexels.com/photo/woman-in-white-and-black-polka-dot-long-sleeve-shirt-and-black-skirt-11203434/",
+    "photographer": "Lany-Jade Mondou",
+    "photographer_url": "https://www.pexels.com/@lany",
+    "photographer_id": 135943481,
+    "avg_color": "#A89078",
+    "src": {
+      "original": "https://images.pexels.com/photos/11203434/pexels-photo-11203434.jpeg",
+      "large2x": "https://images.pexels.com/photos/11203434/pexels-photo-11203434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11203434/pexels-photo-11203434.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11203434/pexels-photo-11203434.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11203434/pexels-photo-11203434.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11203434/pexels-photo-11203434.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11203434/pexels-photo-11203434.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11203434/pexels-photo-11203434.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Woman in White and Black Polka Dot Long Sleeve Shirt and Black Skirt"
+  },
+  {
+    "id": 11198744,
+    "width": 3194,
+    "height": 3992,
+    "url": "https://www.pexels.com/photo/woman-in-red-blazer-standing-11198744/",
+    "photographer": "Lany-Jade Mondou",
+    "photographer_url": "https://www.pexels.com/@lany",
+    "photographer_id": 135943481,
+    "avg_color": "#756158",
+    "src": {
+      "original": "https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg",
+      "large2x": "https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "large": "https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      "medium": "https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "small": "https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg?auto=compress&cs=tinysrgb&h=130",
+      "portrait": "https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800",
+      "landscape": "https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+      "tiny": "https://images.pexels.com/photos/11198744/pexels-photo-11198744.jpeg?auto=compress&cs=tinysrgb&dpr=1&fit=crop&h=200&w=280"
+    },
+    "liked": false,
+    "alt": "Woman in Red Blazer Standing"
+  },
 ]
-
-const curated = () => {
-
-  const imgData =  data.map((eachData, index) => {
-    const data =  `
-      <figure data-id=${index}>
-        <img width=400 height=300 src="${eachData.src.portrait}" alt="${eachData.alt}" class="img-fluid">
-      </figure>	
-    `;
-
-    return data;
-  })
-
-  console.log(JSON.stringify(imgData).replace(',', ''))
-  return JSON.stringify(imgData).replace(',', '')
-}
-
-
-export default curated;

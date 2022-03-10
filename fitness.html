@@ -8,23 +8,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
 
   <div id="header"></div>
 
   <main>
-    <section class="wrapper nature-hero">
+    <section class="wrapper fitness-hero">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Nature</h5>
-        <p>Heaven is under our feet as well as over our heads.</p>
+        <h5>Fitness</h5>
+        <p>Bodybuilding is much like any other sport. To be successful, you must dedicate yourself 100% to your training, diet and
+        mental approach.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <div class="grid" id="nature-gallery">
-  
-        </div>  
+        <div class="grid" id="fitness-gallery">
+
+        </div>
       </div>
     </section>
   </main>
@@ -34,10 +36,10 @@
   <script type="module">
     import header from './header.js';
     import footer from './footer.js';
-    import naturePhotos from './nature.mjs';
-    document.getElementById('header').innerHTML = header('nature');
+    import fitness from './fitness.js';
+    document.getElementById('header').innerHTML = header('fitness');
     document.getElementById('footer').innerHTML = footer();
-    document.getElementById('nature-gallery').innerHTML = naturePhotos();
+    document.getElementById('fitness-gallery').innerHTML = fitness();
   </script>
 
 </body>

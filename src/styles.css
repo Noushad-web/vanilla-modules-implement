@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 body {
-  font-family: 'Lobster Two' ,cursive;
+  font-family: "Lobster Two", cursive;
   font-size: 62.5%;
 }
 
 * {
-  font-family: 'Lora' ,sans-serif;
+  font-family: "Lora", sans-serif;
 }
 
 .wrapper {
-  
 }
 
 main {
@@ -42,7 +41,7 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.carousel-caption h5{
+.carousel-caption h5 {
   font-size: 3.5em;
 }
 
@@ -59,8 +58,8 @@ main {
   padding-bottom: 2rem;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(3,30.33%);
-  row-gap: 2rem;
+  grid-template-columns: repeat(3, 30.33%);
+  row-gap: 1rem;
   column-gap: 2rem;
   justify-content: center;
 }
@@ -69,8 +68,68 @@ main {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  box-shadow: -2px -2px 5px lightgrey;
+  border-radius: 5px;
+  filter: brightness(100%);
+  transition: all 0.3s ease;
+}
+
+.grid figure img:hover {
+  filter: brightness(50%);
+}
+
+.grid figure {
+  position: relative;
+}
+
+.grid figcaption {
+  position: absolute;
+  bottom: 1rem;
+  width: 336px;
+  text-align: center;
+}
+
+.grid figcaption a {
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 18px;
 }
 
 #home-grid:nth-child(2n) {
   display: none;
+}
+
+
+/* ------------- nature ----------------- */
+.nature-hero {
+  background-image: url('https://images.pexels.com/photos/3493777/pexels-photo-3493777.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.carousel-caption p {
+  font-family: 'lobster two', sans-serif;
+}
+
+
+/* ---------- animal --------------- */
+
+.animal-hero {
+  background-image: url('https://images.pexels.com/photos/144234/bull-landscape-nature-mammal-144234.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/*  --------------- fitness ------------- */
+
+.fitness-hero {
+  background-image: url('https://images.pexels.com/photos/3490348/pexels-photo-3490348.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }

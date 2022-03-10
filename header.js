@@ -28,6 +28,9 @@
 							<li class="nav-item ${active === 'animals' && 'active'}">
 								<a class="nav-link" href="./animal.html">Animals</a>
 							</li>
+							<li class="nav-item ${active === 'fitness' && 'active'}">
+								<a class="nav-link" href="./fitness.html">Fitness</a>
+							</li>
 						</ul>
 					</div>
 				</div>
