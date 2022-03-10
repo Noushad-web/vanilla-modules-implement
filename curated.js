@@ -1,4 +1,4 @@
-export const curated = [
+const data = [
   {
     "id": 11321694,
     "width": 3729,
@@ -660,3 +660,22 @@ export const curated = [
     "alt": "Gray Concrete Building Under White Sky"
   }
 ]
+
+const curated = () => {
+
+  const imgData =  data.map((eachData, index) => {
+    const data =  `
+      <figure data-id=${index}>
+        <img width=400 height=300 src="${eachData.src.portrait}" alt="${eachData.alt}" class="img-fluid">
+      </figure>	
+    `;
+
+    return data;
+  })
+
+  console.log(JSON.stringify(imgData).replace(',', ''))
+  return JSON.stringify(imgData).replace(',', '')
+}
+
+
+export default curated;
