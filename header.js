@@ -5,11 +5,10 @@
    return `<header>
 			<nav class="navbar w-100 navbar-expand-lg navbar-dark bg-transparent">
 				<div class="container">
-					<a class="navbar-brand" href="#">
-						<svg width="32" height="32" class="hic6U" viewBox="0 0 32 32" version="1.1" aria-labelledby="unsplash-home"
-							aria-hidden="false">
-							<title id="unsplash-home">Unsplash Home</title>
-							<path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+					<a class="navbar-brand" href="./index.html">
+						<svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 32">
+							<path d="M2 0h28a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#05A081"></path>
+							<path d="M13 21h3.863v-3.752h1.167a3.124 3.124 0 1 0 0-6.248H13v10zm5.863 2H11V9h7.03a5.124 5.124 0 0 1 .833 10.18V23z" fill="#fff"></path>
 						</svg>
 					</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -30,6 +29,9 @@
 							</li>
 							<li class="nav-item ${active === 'fitness' && 'active'}">
 								<a class="nav-link" href="./fitness.html">Fitness</a>
+							</li>
+							<li class="nav-item ${active === 'fashion' && 'active'}">
+								<a class="nav-link" href="./fashion.html">Fashion</a>
 							</li>
 						</ul>
 					</div>

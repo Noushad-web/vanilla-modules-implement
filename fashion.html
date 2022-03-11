@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main>
+    <section class="wrapper fitness-hero">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Fashion</h5>
+        <p>Fashion is the armor to survive the reality of everyday life.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="grid" id="fitness-gallery">
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script type="module">
+    import header from './header.js';
+    import footer from './footer.js';
+    import fashion from './fashion.js';
+    document.getElementById('header').innerHTML = header('fashion');
+    document.getElementById('footer').innerHTML = footer();
+    document.getElementById('fitness-gallery').innerHTML = fashion();
+  </script>
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@ const footer = () => {
 				<div class="row divider-left">
 					<div class="col-3">
 						<div class="column">
-							<h3>Unsplash</h3>
+							<h3> Pexels</h3>
 							<div class="row">
 								<div class="col flex-grow-0">
 									<a href="">
@@ -77,7 +77,7 @@ const footer = () => {
 						<ul class="column address">
 							<li>Visit</li>
 							<li>
-								Unsplash So California
+								Pexel So California
 								34 tesla ste 100,
 								Irvine, Ca,USA 92618
 							</li>
@@ -90,7 +90,7 @@ const footer = () => {
 
 							<li>
 								<a href="">
-									unsplash@gmail.com
+									Pexels@gmail.com
 								</a>
 							</li>
 
@@ -106,13 +106,13 @@ const footer = () => {
 			<hr>
 			<div class="container-fluid bg-white position-absolute">
 				<p class="text-center py-3 text-banner mb-0">
-					Copyright © 2022 Unsplash®. All rights reserved
+					Copyright © 2022 Pexels®. All rights reserved
 				</p>
 			</div>
 
 			<style>
 				footer {
-					background-color: black;
+					background-color: #05a081;
 					padding: 1.5rem 0;
 				}
 			

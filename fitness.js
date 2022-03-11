@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     "id": 841130,
     "width": 4933,
@@ -1103,16 +1103,10 @@ const data = [
 
 const fitnessPhotos = () => {
 
-  const randomLink = [
-    './animal.html',
-    './nature.html',
-    './fitness.html'
-  ]
-
   let imgData = data.map((eachData, index) => {
     const data = `
       <figure data-id=${index}>
-        <a href="${randomLink[Math.floor(Math.random() * 3)]}">
+        <a href="${eachData.url}" target="_blank">
           <img width=336 height=504 src="${eachData.src.portrait}" alt="${eachData.alt}" class="img-fluid">          
         </a>
 
